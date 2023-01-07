@@ -1,12 +1,15 @@
 import React from "react";
 
 export default props => {
-    const min = props.min;
-    const max = props.max;
-    const randomNumber = min + (max-min) * Math.random();
+    const {min, max} = props;
+    const randomNumber = parseInt(min + (max - min) * Math.random());
 
     return (
-        <p>O Nº aleatório entre
-            {min} e {max} foi {randomNumber}</p>
+        <div>
+            <h2>Valor Aleatório</h2>
+            <p><strong>Valor Mínimo: </strong>{min}</p>
+            <p><strong>Valor Máximo: </strong>{max}</p>
+            <p><strong>Valor Escolhido: </strong>{randomNumber}</p>
+        </div>
     )
 }
